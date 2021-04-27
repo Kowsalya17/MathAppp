@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="349dp"
+        android:layout_weight="6"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/shape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="SHAPES"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/tri"
+            android:layout_width="365dp"
+            android:layout_height="471dp"
+            android:src="@drawable/circle" />
+
+        <TextView
+            android:id="@+id/is"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="260dp"
+            android:gravity="center"
+            android:text="CIRCLE"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="6">
+
+              <Button
+                  android:layout_width="153dp"
+                  android:layout_height="68dp"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentBottom="true"
+                  android:layout_marginBottom="1dp"
+                  android:onClick="prev"
+                  android:text="Prev" />
+
+              <Button
+                  android:layout_width="153dp"
+                  android:layout_height="68dp"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentBottom="true"
+                  android:layout_marginRight="-2dp"
+                  android:layout_marginBottom="-6dp"
+                  android:onClick="next"
+                  android:text="Next" />
+
+              <ImageButton
+                  android:id="@+id/ring"
+                  android:layout_width="99dp"
+                  android:layout_height="115dp"
+                  android:layout_alignParentStart="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentTop="true"
+                  android:layout_alignParentEnd="true"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentBottom="true"
+                  android:layout_marginStart="155dp"
+                  android:layout_marginLeft="155dp"
+                  android:layout_marginTop="24dp"
+                  android:layout_marginEnd="139dp"
+                  android:layout_marginRight="139dp"
+                  android:layout_marginBottom="80dp"
+                  app:srcCompat="@android:drawable/ic_btn_speak_now" />
+
+          </RelativeLayout>
+
+</LinearLayout>
+
