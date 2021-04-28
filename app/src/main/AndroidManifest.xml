@@ -9,10 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MathApp">
-        <activity android:name=".quiz_result" />
-        <activity android:name=".quiz_questions" />
+        <activity android:name=".quiz"></activity>
         <activity android:name=".game" />
-        <activity android:name=".quiz" />
         <activity android:name=".learns" />
         <activity android:name=".learnm" />
         <activity android:name=".learnd" />
