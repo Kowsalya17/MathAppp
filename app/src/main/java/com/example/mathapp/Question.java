@@ -19,8 +19,6 @@ public class Question {
         this.secondNumber = randomNumberMaker.nextInt(upperLimit);
         this.answer = this.firstNumber + this.secondNumber;
         this.questionPhase = firstNumber + " + " + secondNumber + " = ";
-        this.answer = this.firstNumber - this.secondNumber;
-        this.questionPhase = firstNumber + " - " + secondNumber + " = ";
         this.answerPosition = randomNumberMaker.nextInt(4);
         this.answerArray = new int[] {0,1,2,3};
         this.answerArray[0] = answer + 1;
