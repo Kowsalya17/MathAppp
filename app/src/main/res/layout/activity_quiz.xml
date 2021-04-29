@@ -56,17 +56,18 @@
         android:id="@+id/tv_questions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:text="TextView"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/tv_score"
         app:layout_constraintStart_toEndOf="@+id/tv_timer"
         app:layout_constraintTop_toBottomOf="@id/prog_timer" />
 
     <TableLayout
         android:layout_width="0dp"
-        android:layout_height="650dp"
+        android:layout_height="500dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="60dp"
@@ -86,7 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:height="320dp"
+                android:height="250dp"
                 android:background="#45aaf2"
                 android:text="Button"
                 app:backgroundTint="#45aaf2" />
@@ -96,7 +97,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:height="320dp"
+                android:height="250dp"
                 android:background="#4b7bec"
                 android:text="Button"
                 app:backgroundTint="#4b7bec" />
@@ -111,7 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:height="320dp"
+                android:height="250dp"
                 android:background="#2d98da"
                 android:text="Button"
                 app:backgroundTint="#2d98da" />
@@ -121,7 +122,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:height="320dp"
+                android:height="250dp"
                 android:background="#3867d6"
                 android:text="Button"
                 app:backgroundTint="#3867d6" />

@@ -33,7 +33,7 @@ public class Gaming {
             numberIcorrect++;
             isCorrect=false;
         }
-        score=numberCorrect*10-numberIcorrect*30;
+        score=numberCorrect*10-numberIcorrect*10;
         return isCorrect;
     }
 

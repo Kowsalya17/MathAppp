@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class quiz extends AppCompatActivity {
     Button btn_start,btn_answer0,btn_answer1,btn_answer2,btn_answer3;
@@ -18,12 +17,12 @@ public class quiz extends AppCompatActivity {
     Gaming g = new Gaming();
     int secondsRemaining=30;
 
-    CountDownTimer timer = new CountDownTimer(30000, 1000) {
+    CountDownTimer timer = new CountDownTimer(45000, 1000) {
         @Override
         public void onTick(long millisUntilFinished) {
             secondsRemaining--;
             tv_timer.setText(Integer.toString(secondsRemaining) + "sec");
-            prog_timer.setProgress(30 - secondsRemaining);
+            prog_timer.setProgress(45 - secondsRemaining);
         }
         @Override
         public void onFinish() {
@@ -70,7 +69,7 @@ public class quiz extends AppCompatActivity {
             public void onClick(View v) {
                 Button start_button =  (Button) v;
                 start_button.setVisibility(View.INVISIBLE);
-                secondsRemaining = 30;
+                secondsRemaining = 45;
                 g = new Gaming();
                 nextTurn();
                 timer.start();
