@@ -4,15 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.IOException;
+
 public class learnshapes extends AppCompatActivity {
 
+    private static final String TAG = learnshapes.class.getSimpleName();
     ImageButton ring;
     TextView shape;
     TextView is;
@@ -80,47 +85,40 @@ public class learnshapes extends AppCompatActivity {
             R.raw.trapezium,
             R.raw.triangle,
     };
+    int currentShapeSound = sound[0];
 
+    private MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(TAG, "onCreate: start");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learnshapes);
 
-        ring = (ImageButton)findViewById(R.id.ring);
+        ring = findViewById(R.id.ring);
 
-        final MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.circlee);
-        ring.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mediaPlayer.start();
-            }
-        });
-        ring = (ImageButton)findViewById(R.id.ring);
-        final MediaPlayer mediaPlayer1 = MediaPlayer.create(this,R.raw.cone);
-        ring.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mediaPlayer1.start();
-            }
+//        MediaPlayer mediaPlayer = MediaPlayer.create(this,currentShapeSound);
+
+        ring.setOnClickListener(v -> {
+            mediaPlayer = MediaPlayer.create(learnshapes.this,currentShapeSound);
+            mediaPlayer.start();
         });
 
-        shape = (TextView)findViewById(R.id.shape);
-        is = (TextView)findViewById(R.id.is);
-        tri = (ImageView)findViewById(R.id.tri);
+        shape = findViewById(R.id.shape);
+        is = findViewById(R.id.is);
+        tri = findViewById(R.id.tri);
 
         shape.setText(shape2d[shapes]);
         is.setText(isi[shapes]);
         tri.setImageResource(triangle[shapes]);
 
     }
-    
-
     public void next(View view){
         if(shapes<12) {
             shapes++;
             shape.setText(shape2d[shapes]);
             is.setText(isi[shapes]);
             tri.setImageResource(triangle[shapes]);
+            currentShapeSound = sound[shapes];
         }
         else {
             Toast.makeText(this, "END OF SHAPES",Toast.LENGTH_SHORT).show();
