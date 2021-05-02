@@ -2,9 +2,7 @@ package com.example.mathapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,8 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.IOException;
-
 public class learnshapes extends AppCompatActivity {
 
     private static final String TAG = learnshapes.class.getSimpleName();
@@ -22,7 +18,6 @@ public class learnshapes extends AppCompatActivity {
     TextView shape;
     TextView is;
     ImageView tri;
-    MediaPlayer ring1;
     int shapes = 0;
 
     String[] shape2d = new String[]{
@@ -93,25 +88,31 @@ public class learnshapes extends AppCompatActivity {
         Log.i(TAG, "onCreate: start");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learnshapes);
+        findViews();
 
-        ring = findViewById(R.id.ring);
-
-//        MediaPlayer mediaPlayer = MediaPlayer.create(this,currentShapeSound);
+        mediaPlayer = MediaPlayer.create(learnshapes.this,currentShapeSound);
+        mediaPlayer.start();
 
         ring.setOnClickListener(v -> {
             mediaPlayer = MediaPlayer.create(learnshapes.this,currentShapeSound);
             mediaPlayer.start();
         });
+        uiSetup();
+    }
 
-        shape = findViewById(R.id.shape);
-        is = findViewById(R.id.is);
-        tri = findViewById(R.id.tri);
-
+    private void uiSetup() {
         shape.setText(shape2d[shapes]);
         is.setText(isi[shapes]);
         tri.setImageResource(triangle[shapes]);
-
     }
+
+    private void findViews() {
+        ring = findViewById(R.id.ring);
+        shape = findViewById(R.id.shape);
+        is = findViewById(R.id.is);
+        tri = findViewById(R.id.tri);
+    }
+
     public void next(View view){
         if(shapes<12) {
             shapes++;
@@ -119,6 +120,8 @@ public class learnshapes extends AppCompatActivity {
             is.setText(isi[shapes]);
             tri.setImageResource(triangle[shapes]);
             currentShapeSound = sound[shapes];
+            mediaPlayer = MediaPlayer.create(learnshapes.this,currentShapeSound);
+            mediaPlayer.start();
         }
         else {
             Toast.makeText(this, "END OF SHAPES",Toast.LENGTH_SHORT).show();
@@ -130,10 +133,20 @@ public class learnshapes extends AppCompatActivity {
             shape.setText(shape2d[shapes]);
             is.setText(isi[shapes]);
             tri.setImageResource(triangle[shapes]);
+            currentShapeSound = sound[shapes];
+            mediaPlayer = MediaPlayer.create(learnshapes.this,currentShapeSound);
+            mediaPlayer.start();
         }
         else {
             Toast.makeText(this, "TYPES OF SHAPES",Toast.LENGTH_SHORT).show();
         }
     }
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mediaPlayer!=null){
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
 }
