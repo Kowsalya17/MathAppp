@@ -1,14 +1,18 @@
 package com.example.mathapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class learnm extends AppCompatActivity {
+    private static final String TAG = learnm.class.getSimpleName();
+    ImageButton sound2;
     TextView months;
     TextView janu;
     ImageView jan;
@@ -56,26 +60,59 @@ public class learnm extends AppCompatActivity {
             R.drawable.nov,
             R.drawable.dec,
     };
+    int[] soundm = new int[]{
+            R.raw.jan,
+            R.raw.feb,
+            R.raw.mar,
+            R.raw.apr,
+            R.raw.may,
+            R.raw.jun,
+            R.raw.jul,
+            R.raw.aug,
+            R.raw.sept,
+            R.raw.oct,
+            R.raw.nov,
+            R.raw.dec,
+    };
+    int currentShapeSound = soundm[0];
 
+    private MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(TAG, "onCreate: start");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learnm);
+        findViews();
 
-        months = (TextView)findViewById(R.id.months);
-        janu = (TextView)findViewById(R.id.janu);
-        jan = (ImageView)findViewById(R.id.jan);
+        mediaPlayer = MediaPlayer.create(learnm.this, currentShapeSound);
+        mediaPlayer.start();
 
+        sound2.setOnClickListener(v -> {
+            mediaPlayer = MediaPlayer.create(learnm.this, currentShapeSound);
+            mediaPlayer.start();
+        });
+        uiSetup();
+    }
+    private void uiSetup() {
         months.setText(mon[month]);
         janu.setText(mont[month]);
         jan.setImageResource(monthss[month]);
     }
+    private void findViews() {
+        months = (TextView) findViewById(R.id.months);
+        janu = (TextView) findViewById(R.id.janu);
+        jan = (ImageView) findViewById(R.id.jan);
+    }
+
     public void next(View view){
         if(month<11) {
             month++;
             months.setText(mon[month]);
             janu.setText(mont[month]);
             jan.setImageResource(monthss[month]);
+            currentShapeSound = soundm[month];
+            mediaPlayer = MediaPlayer.create(learnm.this,currentShapeSound);
+            mediaPlayer.start();
         }
         else {
             Toast.makeText(this, "END OF MONTHS",Toast.LENGTH_SHORT).show();
@@ -87,10 +124,20 @@ public class learnm extends AppCompatActivity {
             months.setText(mon[month]);
             janu.setText(mont[month]);
             jan.setImageResource(monthss[month]);
+            currentShapeSound = soundm[month];
+            mediaPlayer = MediaPlayer.create(learnm.this,currentShapeSound);
+            mediaPlayer.start();
         }
         else {
             Toast.makeText(this, "MONTHS OF THE YEAR",Toast.LENGTH_SHORT).show();
         }
     }
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mediaPlayer!=null){
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
 }
