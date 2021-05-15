@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context=".dice">
+
+    <Button
+        android:id="@+id/b_even"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginRight="53dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toStartOf="@+id/b_roll"
+        android:layout_toLeftOf="@+id/b_roll"
+        android:text="EVEN"
+        android:textColor="@color/black"
+        app:backgroundTint="#F61B0B" />
+
+    <Button
+        android:id="@+id/b_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toStartOf="@+id/b_odd"
+        android:layout_toLeftOf="@+id/b_odd"
+        android:text="ROLL"
+        android:textColor="@color/black"
+        app:backgroundTint="#F61B0B" />
+
+    <Button
+        android:id="@+id/b_odd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="2dp"
+        android:text="ODD"
+        android:textColor="@color/black"
+        app:backgroundTint="#F61B0B" />
+
+    <TextView
+        android:id="@+id/tv_cpu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="CPU: 0"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/tv_you"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="YOU: 0"
+        android:textSize="24dp"/>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textSize="24dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="25dp"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_dice1"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/dice6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+        <ImageView
+            android:id="@+id/iv_dice2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/dice6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+</LinearLayout>
+</RelativeLayout>

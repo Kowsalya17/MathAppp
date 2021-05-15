@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".anagram">
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Guess The Word!"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/tv_word"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_info"
+        android:gravity="center"
+        android:text=""
+        android:textSize="24dp"/>
+
+    <EditText
+        android:id="@+id/et_guess"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_word"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="word"
+        android:text="" />
+
+    <Button
+        android:id="@+id/b_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_guess"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="105dp"
+        android:text="CHECK"
+        app:backgroundTint="#771C75" />
+    <Button
+        android:id="@+id/b_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_guess"
+        android:layout_marginTop="483dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="NEW"
+        android:backgroundTint="#771C75"/>
+</RelativeLayout>

@@ -15,13 +15,20 @@ public class shapes extends AppCompatActivity {
         setContentView(R.layout.activity_shapes);
 
         Button bt1=(Button)findViewById(R.id.button8);
-        Button bt3=(Button)findViewById(R.id.button10);
+        Button bt2=(Button)findViewById(R.id.button10);
 
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent it1=new Intent(shapes.this,learnshapes.class);
                 startActivity(it1);
+            }
+        });
+        bt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it2=new Intent(shapes.this,video.class);
+                startActivity(it2);
             }
         });
     }

@@ -6,4 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".game">
 
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="360dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="148dp"
+        android:text="ODD EVEN Dice Game"
+        android:textSize="40dp"
+        android:textStyle="italic"
+        android:backgroundTint="#EC9A7D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="360dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="264dp"
+        android:backgroundTint="#EC9A7D"
+        android:text="Anagram"
+        android:textSize="40dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button12"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
