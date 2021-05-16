@@ -1,5 +1,4 @@
 package com.example.mathapp;
-
 import android.widget.MediaController;
 import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
