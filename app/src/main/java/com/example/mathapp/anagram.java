@@ -19,16 +19,19 @@ public class anagram extends AppCompatActivity {
     String currentWord;
 
     String[] dictionary={
-            "one",
-            "two",
-            "three",
-            "four",
-            "five",
-            "six",
-            "seven",
-            "eight",
-            "nine",
-            "ten"
+            "circle",
+            "cone",
+            "cube",
+            "cuboid",
+            "cylinder",
+            "parallelogram",
+            "rectangle",
+            "rhombus",
+            "semicircle",
+            "sphere",
+            "square",
+            "trapezium",
+            "triangle"
     };
 
     @Override
