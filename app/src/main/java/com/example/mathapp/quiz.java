@@ -15,7 +15,7 @@ public class quiz extends AppCompatActivity {
     TextView tv_score,tv_questions,tv_timer,tv_bottommessage;
     ProgressBar prog_timer;
     Gaming g = new Gaming();
-    int secondsRemaining=30;
+    int secondsRemaining=45;
 
     CountDownTimer timer = new CountDownTimer(45000, 1000) {
         @Override

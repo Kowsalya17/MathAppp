@@ -99,6 +99,7 @@ public class learnm extends AppCompatActivity {
         jan.setImageResource(monthss[month]);
     }
     private void findViews() {
+        sound2=(ImageButton)findViewById(R.id.sound2);
         months = (TextView) findViewById(R.id.months);
         janu = (TextView) findViewById(R.id.janu);
         jan = (ImageView) findViewById(R.id.jan);

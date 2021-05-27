@@ -8,12 +8,12 @@
 
     <Button
         android:id="@+id/btn_start"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
+        android:layout_width="182dp"
+        android:layout_height="190dp"
         android:background="#20bf6b"
         android:text="GO"
         android:textColor="@color/white"
-        android:textSize="50sp"
+        android:textSize="65sp"
         android:textStyle="italic"
         app:backgroundTint="#20bf6b"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -37,7 +37,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="30sp"
+        android:textSize="31dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +49,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="30sp"
+        android:textSize="31dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/prog_timer"/>
 
@@ -59,7 +61,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:text="TextView"
-        android:textSize="30sp"
+        android:textSize="31sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/tv_score"
         app:layout_constraintStart_toEndOf="@+id/tv_timer"
@@ -90,6 +92,7 @@
                 android:height="250dp"
                 android:background="#45aaf2"
                 android:text="Button"
+                android:textSize="37dp"
                 app:backgroundTint="#45aaf2" />
 
             <Button
@@ -100,6 +103,7 @@
                 android:height="250dp"
                 android:background="#4b7bec"
                 android:text="Button"
+                android:textSize="37dp"
                 app:backgroundTint="#4b7bec" />
         </TableRow>
 
@@ -115,6 +119,7 @@
                 android:height="250dp"
                 android:background="#2d98da"
                 android:text="Button"
+                android:textSize="37dp"
                 app:backgroundTint="#2d98da" />
 
             <Button
@@ -125,6 +130,7 @@
                 android:height="250dp"
                 android:background="#3867d6"
                 android:text="Button"
+                android:textSize="37dp"
                 app:backgroundTint="#3867d6" />
         </TableRow>
 
@@ -136,7 +142,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="TextView"
-        android:textSize="30sp"
+        android:textSize="35sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"

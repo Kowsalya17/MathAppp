@@ -18,10 +18,7 @@
         <activity android:name=".learnm" />
         <activity android:name=".learnd" />
         <activity android:name=".learnshapes" />
-        <activity android:name=".wordcomb" />
         <activity android:name=".daymonths" />
-        <activity android:name=".compare" />
-        <activity android:name=".oddreven" />
         <activity android:name=".shapes" />
         <activity android:name=".measurements" />
         <activity android:name=".MainActivity">

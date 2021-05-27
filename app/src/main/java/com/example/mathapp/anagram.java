@@ -54,6 +54,7 @@ public class anagram extends AppCompatActivity {
                     tv_info.setText("Awesome!");
                     b_check.setEnabled(false);
                     b_new.setEnabled(true);
+                    newGame();
                 } else  {
                     tv_info.setText("Try Again!");
                 }

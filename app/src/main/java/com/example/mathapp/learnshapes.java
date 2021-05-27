@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class learnshapes extends AppCompatActivity {
-
     private static final String TAG = learnshapes.class.getSimpleName();
     ImageButton ring;
     TextView shape;
@@ -98,8 +97,7 @@ public class learnshapes extends AppCompatActivity {
         });
         uiSetup();
     }
-
-    private void uiSetup() {
+        private void uiSetup() {
         shape.setText(shape2d[shapes]);
         is.setText(isi[shapes]);
         tri.setImageResource(triangle[shapes]);

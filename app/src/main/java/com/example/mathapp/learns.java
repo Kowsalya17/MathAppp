@@ -45,7 +45,6 @@ public class learns extends AppCompatActivity {
     int currentShapeSound = sounds[0];
 
     private MediaPlayer mediaPlayer;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.i(TAG, "onCreate: start");
@@ -68,11 +67,11 @@ public class learns extends AppCompatActivity {
         sum.setImageResource(seaso[season]);
     }
     private void findViews() {
-        seasons = (TextView) findViewById(R.id.months);
-        summ = (TextView) findViewById(R.id.janu);
-        sum = (ImageView) findViewById(R.id.jan);
+        sound3=(ImageButton)findViewById(R.id.sound3);
+        seasons = (TextView) findViewById(R.id.seasons);
+        summ = (TextView) findViewById(R.id.summ);
+        sum = (ImageView) findViewById(R.id.sum);
     }
-
     public void next(View view){
         if(season<3) {
             season++;

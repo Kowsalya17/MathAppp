@@ -74,11 +74,12 @@ public class learnd extends AppCompatActivity {
         uiSetup();
     }
         private void uiSetup() {
-            days.setText(day1[day]);
-            su.setText(sund[day]);
-            sun.setImageResource(sunday[day]);
+        days.setText(day1[day]);
+        su.setText(sund[day]);
+        sun.setImageResource(sunday[day]);
         }
         private void findViews() {
+            sound1=(ImageButton)findViewById(R.id.sound1);
             days = (TextView) findViewById(R.id.days);
             su = (TextView) findViewById(R.id.su);
             sun = (ImageView) findViewById(R.id.sun);

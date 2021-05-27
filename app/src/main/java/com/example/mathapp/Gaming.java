@@ -1,5 +1,8 @@
 package com.example.mathapp;
 
+import android.graphics.Color;
+import android.widget.Button;
+
 import java.util.ArrayList;
 import java.util.List;
 
