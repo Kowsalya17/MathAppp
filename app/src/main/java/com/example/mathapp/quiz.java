@@ -1,7 +1,5 @@
 package com.example.mathapp;
-
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -9,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class quiz extends AppCompatActivity {
     Button btn_start,btn_answer0,btn_answer1,btn_answer2,btn_answer3;
@@ -64,6 +64,11 @@ public class quiz extends AppCompatActivity {
         tv_score.setText("0Pts");
         prog_timer.setProgress(0);
 
+        btn_answer0.setEnabled(false);
+        btn_answer1.setEnabled(false);
+        btn_answer2.setEnabled(false);
+        btn_answer3.setEnabled(false);
+
         View.OnClickListener startButtonClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,8 +87,20 @@ public class quiz extends AppCompatActivity {
                 Button buttonClicked =  (Button) v;
                 int answerSelected=Integer.parseInt(buttonClicked.getText().toString());
                 g.checkAnswer(answerSelected);
+                if(g.checkAnswer(answerSelected)){
+                    buttonClicked.setBackgroundColor(getResources().getColor(R.color.success));
+                    }else{
+                    buttonClicked.setBackgroundColor(getResources().getColor(R.color.error));
+                    }
                 tv_score.setText(Integer.toString(g.getScore()));
                 nextTurn();
+                final Handler handler=new Handler();
+                handler.postDelayed(new Runnable(){
+                    @Override
+                    public void run(){
+                        nextTurn();
+                        }
+                    },500);
             }
         };
         btn_start.setOnClickListener(startButtonClickListener);
@@ -95,6 +112,11 @@ public class quiz extends AppCompatActivity {
     private void nextTurn() {
         g.makeNewQuestion();
         int [] answer = g.getCurrentQuestion().getAnswerArray();
+        btn_answer0.setBackgroundColor(getResources().getColor(R.color.b1));
+        btn_answer1.setBackgroundColor(getResources().getColor(R.color.b2));
+        btn_answer2.setBackgroundColor(getResources().getColor(R.color.b3));
+        btn_answer3.setBackgroundColor(getResources().getColor(R.color.b4));
+
         btn_answer0.setText(Integer.toString(answer[0]));
         btn_answer1.setText(Integer.toString(answer[1]));
         btn_answer2.setText(Integer.toString(answer[2]));

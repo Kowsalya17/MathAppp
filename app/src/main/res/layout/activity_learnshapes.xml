@@ -49,6 +49,7 @@
                   android:layout_alignParentLeft="true"
                   android:layout_alignParentBottom="true"
                   android:layout_marginBottom="1dp"
+                  android:background="@color/ic_launcher_background"
                   android:onClick="prev"
                   android:text="Prev" />
 
@@ -60,6 +61,7 @@
                   android:layout_marginRight="-2dp"
                   android:layout_marginBottom="-6dp"
                   android:onClick="next"
+                  android:background="@color/b1"
                   android:text="Next" />
 
               <ImageButton
@@ -70,6 +72,7 @@
                   android:layout_alignParentLeft="true"
                   android:layout_alignParentTop="true"
                   android:layout_alignParentEnd="true"
+                  android:background="@color/teal_200"
                   android:layout_alignParentRight="true"
                   android:layout_alignParentBottom="true"
                   android:layout_marginStart="155dp"
