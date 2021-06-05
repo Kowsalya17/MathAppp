@@ -3,14 +3,24 @@ package com.example.mathapp;
 import androidx.appcompat.app.AppCompatActivity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class learnm extends AppCompatActivity {
+    Handler hanlder = new Handler();
+    Runnable runnable;
+    int delay=5000;
+    String buttonAction="button1";
+    private static String button1="button1";
+    private static String button2="button2";
+    Button bt1,bt2;
+
     private static final String TAG = learnm.class.getSimpleName();
     ImageButton sound2;
     TextView months;
@@ -82,6 +92,8 @@ public class learnm extends AppCompatActivity {
         Log.i(TAG, "onCreate: start");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learnm);
+        bt1=(Button)findViewById(R.id.previous1);
+        bt2=(Button)findViewById(R.id.next1);
         findViews();
 
         mediaPlayer = MediaPlayer.create(learnm.this, currentShapeSound);
@@ -92,6 +104,28 @@ public class learnm extends AppCompatActivity {
             mediaPlayer.start();
         });
         uiSetup();
+    }
+    @Override
+    protected void onResume() {
+        hanlder.postDelayed(runnable=new Runnable() {
+            @Override
+            public void run() {
+                hanlder.postDelayed(runnable,delay);
+                setMovingAction();
+            }
+        },delay);
+        super.onResume();
+    }
+    private void setMovingAction() {
+        if (buttonAction.equals(button1)){
+            bt2.setBackground(getResources().getDrawable(R.drawable.my_button_bg));
+            bt1.setBackgroundColor(getResources().getColor(R.color.button));
+            buttonAction=button2;
+        }else if (buttonAction.equals(button2)){
+            bt1.setBackground(getResources().getDrawable(R.drawable.my_button_bg));
+            bt2.setBackgroundColor(getResources().getColor(R.color.button));
+            buttonAction=button1;
+        }
     }
     private void uiSetup() {
         months.setText(mon[month]);

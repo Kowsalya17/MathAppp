@@ -44,21 +44,25 @@
         android:layout_weight="6">
 
         <Button
+            android:id="@+id/previous2"
             android:layout_width="153dp"
             android:layout_height="68dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="1dp"
+            android:background="@color/ic_launcher_background"
             android:onClick="prev"
             android:text="Prev" />
 
         <Button
+            android:id="@+id/next2"
             android:layout_width="153dp"
             android:layout_height="68dp"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_marginRight="-2dp"
             android:layout_marginBottom="-6dp"
+            android:background="@color/b1"
             android:onClick="next"
             android:text="Next" />
         <ImageButton
@@ -71,6 +75,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
+            android:background="@color/teal_200"
             android:layout_marginStart="155dp"
             android:layout_marginLeft="155dp"
             android:layout_marginTop="24dp"

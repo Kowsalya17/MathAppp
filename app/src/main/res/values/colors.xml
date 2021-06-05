@@ -7,11 +7,5 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <color name="black">#FF000000</color>
-    <color name="ic_launcher_background">#B8E2D7</color>
-    <color name="success">#33ff3b</color>
-    <color name="error">#d80000</color>
-    <color name="b1">#45aaf2</color>
-    <color name="b2">#4b7bec</color>
-    <color name="b3">#2d98da</color>
-    <color  name="b4">#3867d6</color>
+
 </resources>

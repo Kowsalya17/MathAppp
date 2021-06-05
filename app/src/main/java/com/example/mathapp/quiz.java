@@ -93,7 +93,7 @@ public class quiz extends AppCompatActivity {
                     buttonClicked.setBackgroundColor(getResources().getColor(R.color.error));
                     }
                 tv_score.setText(Integer.toString(g.getScore()));
-                nextTurn();
+
                 final Handler handler=new Handler();
                 handler.postDelayed(new Runnable(){
                     @Override
