@@ -11,7 +11,7 @@ import android.widget.Button;
 public class learn extends AppCompatActivity {
     Handler hanlder = new Handler();
     Runnable runnable;
-    int delay=5000;
+    int delay=2000;
     String buttonAction="button1";
     private static String button1="button1";
     private static String button2="button2";

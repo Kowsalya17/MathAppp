@@ -21,7 +21,7 @@
         android:layout_toLeftOf="@+id/b_roll"
         android:text="EVEN"
         android:textColor="@color/black"
-        app:backgroundTint="#F61B0B" />
+        android:background="@color/button" />
 
     <Button
         android:id="@+id/b_roll"
@@ -35,7 +35,7 @@
         android:layout_toLeftOf="@+id/b_odd"
         android:text="ROLL"
         android:textColor="@color/black"
-        app:backgroundTint="#F61B0B" />
+        android:background="@color/button" />
 
     <Button
         android:id="@+id/b_odd"
@@ -49,7 +49,7 @@
         android:layout_marginBottom="2dp"
         android:text="ODD"
         android:textColor="@color/black"
-        app:backgroundTint="#F61B0B" />
+        android:background="@color/button"/>
 
     <TextView
         android:id="@+id/tv_cpu"

@@ -15,11 +15,13 @@ import android.widget.Toast;
 public class learnd extends AppCompatActivity {
     Handler hanlder = new Handler();
     Runnable runnable;
-    int delay=5000;
+    int delay=2000;
     String buttonAction="button1";
     private static String button1="button1";
     private static String button2="button2";
+    private static String button3="button3";
     Button bt1,bt2;
+    ImageButton bt3;
 
     private static final String TAG = learnd.class.getSimpleName();
     ImageButton sound1;
@@ -74,6 +76,7 @@ public class learnd extends AppCompatActivity {
         setContentView(R.layout.activity_learnd);
         bt1=(Button)findViewById(R.id.prev);
         bt2=(Button)findViewById(R.id.next);
+        bt3=(ImageButton)findViewById(R.id.sound1);
         findViews();
 
         mediaPlayer = MediaPlayer.create(learnd.this, currentShapeSound);
@@ -99,10 +102,17 @@ public class learnd extends AppCompatActivity {
     private void setMovingAction() {
         if (buttonAction.equals(button1)){
             bt2.setBackground(getResources().getDrawable(R.drawable.my_button_bg));
+            bt3.setBackgroundColor(getResources().getColor(R.color.button));
             bt1.setBackgroundColor(getResources().getColor(R.color.button));
             buttonAction=button2;
         }else if (buttonAction.equals(button2)){
+            bt3.setBackground(getResources().getDrawable(R.drawable.my_button_bg));
+            bt2.setBackgroundColor(getResources().getColor(R.color.button));
+            bt1.setBackgroundColor(getResources().getColor(R.color.button));
+            buttonAction=button3;
+        }else if (buttonAction.equals(button3)){
             bt1.setBackground(getResources().getDrawable(R.drawable.my_button_bg));
+            bt3.setBackgroundColor(getResources().getColor(R.color.button));
             bt2.setBackgroundColor(getResources().getColor(R.color.button));
             buttonAction=button1;
         }

@@ -54,7 +54,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="105dp"
         android:text="CHECK"
-        app:backgroundTint="#771C75" />
+        android:background="@color/button"/>
     <Button
         android:id="@+id/b_new"
         android:layout_width="match_parent"
@@ -64,5 +64,5 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:text="NEW"
-        android:backgroundTint="#771C75"/>
+        android:background="@color/button"/>
 </RelativeLayout>

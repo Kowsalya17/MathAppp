@@ -4,19 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/learning"
     tools:context=".game">
 
     <Button
         android:id="@+id/button12"
         android:layout_width="360dp"
         android:layout_height="130dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="104dp"
+        android:background="@color/button"
         android:text="ODD EVEN Dice Game"
         android:textSize="40dp"
         android:textStyle="italic"
-        android:backgroundTint="#EC9A7D"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,7 +26,7 @@
         android:layout_width="360dp"
         android:layout_height="74dp"
         android:layout_marginTop="264dp"
-        android:backgroundTint="#EC9A7D"
+        android:background="@color/button"
         android:text="Anagram"
         android:textSize="40dp"
         android:textStyle="italic"
